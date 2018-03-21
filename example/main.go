@@ -1,0 +1,24 @@
+package main
+
+import (
+	"fmt"
+	"os"
+
+	"github.com/karrick/gows"
+)
+
+func main() {
+	col, row, err := gows.GetWinSize()
+	if err != nil {
+		exit(err)
+	}
+	fmt.Printf("%d %d\n", col, row)
+}
+
+func exit(err error) {
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "ERROR: %s\n", err)
+		os.Exit(1)
+	}
+	os.Exit(0)
+}
