@@ -12,7 +12,7 @@ func main() {
 	if err != nil {
 		exit(err)
 	}
-	fmt.Printf("%d %d\n", col, row)
+	fmt.Printf("%d %d\n", row, col) // output in same order as `stty size`
 }
 
 func exit(err error) {
