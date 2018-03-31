@@ -1,6 +1,6 @@
-package gows
-
 // +build darwin dragonfly freebsd netbsd openbsd linux
+
+package gows
 
 import (
 	"os"
